@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ProductsController@list')->name('Index_Products');
+Route::get('/product', 'ProductsController@list')->name('Products');
+Route::post('/submit', 'ProductsController@store')->name('Product_store');
